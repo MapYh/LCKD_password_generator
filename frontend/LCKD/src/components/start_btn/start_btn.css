@@ -1,0 +1,48 @@
+.button_settings {
+  background: white;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.4rem;
+  margin-bottom: 5rem;
+  margin: 5rem;
+
+  width: 311px;
+  height: 62px;
+  background: #ffffff;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #15085f;
+}
+
+.button_settings-styling {
+  text-decoration: none;
+  color: #15085f;
+}
+
+.btn_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+}
+
+.btn_pause {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  height: 50%;
+  width: 100%;
+  padding: 1rem;
+}
