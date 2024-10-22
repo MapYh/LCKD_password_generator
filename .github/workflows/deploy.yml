@@ -1,5 +1,9 @@
 name: Deploy react app
 
+defaults:
+  run:
+    working-directory: ./frontend/LCKD
+
 on:
   push:
     Branches:
@@ -24,14 +28,3 @@ jobs:
 
       - name: ESLint
         run: npx run lint
-
-      - name: Setup pages
-        uses: actions/configure-pages@v3
-      - name: upload dist folder
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: "./dist"
-
-      - name: Deploy to Github Pages
-        id: deployment
-        uses: actions/deploy-pages@v1

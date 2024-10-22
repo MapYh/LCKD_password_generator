@@ -1,5 +1,9 @@
 name: Merge Check
 
+defaults:
+  run:
+    working-directory: ./frontend/LCKD
+
 on:
   pull_request:
     branches:
