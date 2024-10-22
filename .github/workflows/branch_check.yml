@@ -6,11 +6,8 @@ defaults:
 
 on:
   pull_request:
-    defaults:
-      run:
-        working-directory: frontend
-          branches:
-            - main
+    branches:
+      - main
 
 jobs:
   check-merge:

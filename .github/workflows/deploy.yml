@@ -1,15 +1,14 @@
 name: Deploy react app
 
-
+defaults:
+  run:
+    working-directory: frontend
 
 on:
   push:
-    defaults:
-      run:
-        working-directory: frontend
-          Branches:
-            - dev
-            - test
+    Branches:
+      - dev
+      - test
 #
 permissions:
   contents: read
