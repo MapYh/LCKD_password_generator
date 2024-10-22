@@ -8,9 +8,9 @@ on:
   pull_request:
     defaults:
       run:
-      working-directory: frontend
-        branches:
-          - main
+        working-directory: frontend
+          branches:
+            - main
 
 jobs:
   check-merge:
