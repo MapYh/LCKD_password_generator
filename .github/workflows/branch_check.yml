@@ -2,7 +2,7 @@ name: Merge Check
 
 defaults:
   run:
-    working-directory: frontend
+    working-directory: ../../frontend
 
 on:
   pull_request:
