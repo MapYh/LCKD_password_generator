@@ -10,14 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check if the source branch is dev
-        run:
-          working-directory: ./frontend/LCKD
-
-            |
-
-
-            if [ "${{ github.head_ref }}" != "dev" ]; then
-
+        run: |
+          if [ "${{ github.head_ref }}" != "dev" ]; then
             echo "Merging from branch `${{ github.head_ref }}` to `main` is not allowed. Only merges from `dev` are permitted."
             exit 1;
-            fi
+          fi

@@ -1,9 +1,7 @@
 name: Deploy react app
-
 defaults:
   run:
     working-directory: ./frontend/LCKD
-
 on:
   push:
     Branches:
