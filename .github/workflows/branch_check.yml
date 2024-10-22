@@ -2,14 +2,14 @@ name: Merge Check
 
 defaults:
   run:
-    working-directory: frontend
+    working-directory: `../../frontend`
 
 on:
   pull_request:
-  paths:
-    - `frontend`
-      branches:
-        - main
+    paths:
+      - `../../frontend`
+        branches:
+          - main
 
 jobs:
   check-merge:
