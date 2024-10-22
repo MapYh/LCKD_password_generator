@@ -7,7 +7,7 @@ defaults:
 on:
   pull_request:
     paths:
-      - `../../frontend`
+      - `../../frontend/LCKD`
         branches:
           - main
 
