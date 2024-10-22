@@ -6,8 +6,9 @@ defaults:
 
 on:
   pull_request:
-    paths:
-      - `../../frontend/LCKD`
+    defaults:
+      run:
+      working-directory: frontend
         branches:
           - main
 
