@@ -1,5 +1,9 @@
 name: Deploy react app
 
+defaults:
+  run:
+    working-directory: frontend
+
 on:
   push:
     Branches:

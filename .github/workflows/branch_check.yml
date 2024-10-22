@@ -1,5 +1,9 @@
 name: Merge Check
 
+defaults:
+  run:
+    working-directory: frontend
+
 on:
   pull_request:
     branches:
