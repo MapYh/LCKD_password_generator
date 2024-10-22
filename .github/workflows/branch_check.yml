@@ -1,13 +1,11 @@
 name: Merge Check
-
+defaults:
+  run:
+    working-directory: ./frontend/LCKD
 on:
   pull_request:
     branches:
       - main
-
-defaults:
-  run:
-    working-directory: ./frontend/LCKD
 
 jobs:
   check-merge:
