@@ -2,7 +2,7 @@ name: Deploy react app
 
 defaults:
   run:
-    working-directory: `../../frontend`
+    working-directory: frontend
 
 on:
   push:
