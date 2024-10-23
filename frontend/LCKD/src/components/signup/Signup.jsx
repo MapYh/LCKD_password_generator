@@ -1,34 +1,40 @@
 import React from "react";
 import "./signup.css";
 
-export default function Signup() {
-  function handleSubmit(event) {
-    event.preventDefault();
-    const todo = event.target.todo.value;
-    console.log(todo);
-    console.log(event.target.elements.todo.value);
-    console.log(event.target.todo.value);
+export default function Signup({ setUsername, setpassword }) {
+  function handleSubmitUsername(event) {
+    const username = event.target.value;
+    setUsername(username);
+    console.log("Username", username);
   }
+
+  function handleSubmitPassword(event) {
+    const password = event.target.value;
+    setpassword(password);
+
+    console.log("Password", password);
+  }
+
   return (
     <div className="form-footer">
-      <form className="form" onSubmit={handleSubmit}>
-        <label className="form-label">
+      <form className="form">
+        <label className="form-label" onChange={handleSubmitUsername}>
           <input
             className="form-label-input"
             type="text"
             name="username"
-            placeholder="Type username"
+            placeholder="Username"
           />
         </label>
-        <label className="form-label">
+        <label className="form-label" onChange={handleSubmitPassword}>
           <input
             className="form-label-input"
             type="text"
             name="password"
-            placeholder="Type password"
+            placeholder="Password"
           />
         </label>
-        <input className="form-label-btn" type="submit" value="+" />
+        {/* <input className="form-label-btn" type="submit" value="+" /> */}
       </form>
     </div>
   );

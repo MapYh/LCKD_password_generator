@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Background from "../components/background/background";
 import Template from "../components/text-template/template";
 /* import { createSlice, configureStore } from "@reduxjs/toolkit"; */
@@ -23,6 +23,9 @@ const navLanding = {
 };
 
 const Loading = () => {
+  const [username, setUsername] = useState();
+  const [password, setpassword] = useState();
+
   return (
     <div>
       <Background
@@ -38,7 +41,9 @@ const Loading = () => {
           />
         }
         landing_node={<Template />}
-        signup_node={<Signup />}
+        signup_node={
+          <Signup setUsername={setUsername} setpassword={setpassword} />
+        }
         button_node={
           <Button
             stylingBtn={{

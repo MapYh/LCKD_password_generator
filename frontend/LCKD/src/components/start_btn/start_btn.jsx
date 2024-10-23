@@ -3,6 +3,8 @@ import "./start_btn.css";
 import { Link } from "react-router-dom";
 
 export default function start_btn(props) {
+  function sendDataToBackend(username, passowrd) {}
+
   return (
     <section className={`${props.stylingBtn.classnamebtnCenter}`}>
       <div className={`${props.stylingBtn.classname}`}>
