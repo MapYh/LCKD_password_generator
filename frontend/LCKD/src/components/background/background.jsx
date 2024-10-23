@@ -7,7 +7,7 @@ export default function Background(props) {
       <div className={`${props.settings.classname}`}>
         {props.node_nav}
         {props.landing_node}
-        {props.menu_item_node}
+        {props.signup_node}
         {props.form_node}
         {props.button_node}
       </div>

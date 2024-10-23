@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Loading from "../src/loading/loading";
 import Stored_passwords from "../src/stored_passwords/stored";
+import Signup from "../src/components/signup/Signup.jsx";
 
 import "./App.css";
 
@@ -18,7 +19,7 @@ function App() {
         <Route
           index
           element={
-            <main className="body" onClick={handleClick}>
+            <main>
               <Loading />
             </main>
           }
@@ -32,14 +33,14 @@ function App() {
             </main>
           }
         /> */}
-        {/*   <Route
-          path="/new_lckd"
+        <Route
+          path="/signup"
           element={
             <main className="body">
-              <Analog />
+              <Signup />
             </main>
           }
-        /> */}
+        />
         {/*  <Route
           path="/edit_lckd"
           element={

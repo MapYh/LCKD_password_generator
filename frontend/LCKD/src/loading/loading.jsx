@@ -4,6 +4,7 @@ import Template from "../components/text-template/template";
 /* import { createSlice, configureStore } from "@reduxjs/toolkit"; */
 import Button from "../components/start_btn/start_btn";
 import Nav from "../components/nav/nav";
+import Signup from "../components/signup/Signup";
 
 import "../loading/loading.css";
 
@@ -14,7 +15,6 @@ const objectBackground = {
   classBtnStyling: "button_settings ",
   btn_text: "LET ME IN",
   classnameBtn: "button_settings-styling",
-
   nav_text: "Sign up",
 };
 
@@ -38,6 +38,7 @@ const Loading = () => {
           />
         }
         landing_node={<Template />}
+        signup_node={<Signup />}
         button_node={
           <Button
             stylingBtn={{
