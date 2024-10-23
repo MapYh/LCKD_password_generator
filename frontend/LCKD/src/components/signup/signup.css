@@ -20,6 +20,10 @@
   height: 100%;
 } */
 
+.spacer {
+  margin: 1rem;
+}
+
 .form-label-input {
   display: flex;
   width: 100%;
