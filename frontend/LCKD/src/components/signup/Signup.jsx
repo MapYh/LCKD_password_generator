@@ -26,6 +26,7 @@ export default function Signup({ setUsername, setpassword }) {
             placeholder="Username"
           />
         </label>
+        <section className="spacer"></section>
         <label className="form-label" onChange={handleSubmitPassword}>
           <input
             className="form-label-input"
