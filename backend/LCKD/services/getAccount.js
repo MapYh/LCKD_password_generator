@@ -1,5 +1,5 @@
-const db = require("../services/db.js");
-const { GetCommand } = require("@aws-sdk/lib-dynamodb");
+import db from "../services/db.js";
+import { GetCommand } from "@aws-sdk/lib-dynamodb";
 import { sendError } from "../utils/sendResponse";
 
 async function getAccount(username) {

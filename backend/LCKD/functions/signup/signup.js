@@ -1,18 +1,19 @@
 import { sendResponse, sendError } from "../../utils/sendResponse.js";
-const { PutCommand } = require("@aws-sdk/lib-dynamodb");
-const db = require("../../services/db.js");
-const { getAccount } = require("../../services/getAccount.js");
-const { v4: uuidv4 } = require("uuid");
+import { PutCommand } from "@aws-sdk/lib-dynamodb";
+import db from "../../services/db.js";
+import { getAccount } from "../../services/getAccount.js";
+import { uuid } from "uuidv4";
 import middy from "@middy/core";
-const {
-  loginsignupvalidation,
-} = require("../../services/requestValidation/login_signupvalidation");
+import { loginsignupvalidation } from "../../services/requestValidation/login_signupValidation.js";
+import crypto from "crypto-js";
 
-async function createAccount(username, password) {
+async function createAccount(username, ciphertext) {
   const userTable = process.env.USER_TABLE;
   console.log("userTable", userTable);
-  const userId = uuidv4();
+  const userId = uuid();
   console.log("userId", userId);
+  var bytes = crypto.AES.decrypt(ciphertext, "secret key 123");
+  var password = bytes.toString(Crypto.enc.Utf8);
   try {
     const newUser = {
       userId: userId,

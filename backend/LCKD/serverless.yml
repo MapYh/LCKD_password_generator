@@ -1,7 +1,7 @@
 # "org" ensures this Service is used with the correct Serverless Framework Access Key.
 org: randtest
 # "app" enables Serverless Framework Dashboard features and sharing them with other Services.
-app: LCKD
+app: lckd
 # "service" is the name of this project. This will also be added to your AWS resource names.
 service: LCKD
 
@@ -27,12 +27,12 @@ build:
     minify: true
 
 functions:
-  login:
-    handler: functions/login/login.handler
-    events:
-      - httpApi:
-          path: /auth/login
-          method: post
+  #login:
+  #handler: functions/login/login.handler
+  #events:
+  #- httpApi:
+  # path: /auth/login
+  # method: post
   signup:
     handler: functions/signup/signup.handler
     events:
