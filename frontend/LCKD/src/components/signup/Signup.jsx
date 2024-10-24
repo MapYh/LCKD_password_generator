@@ -1,5 +1,6 @@
 import React from "react";
 import "./signup.css";
+import crypto from "crypto-js";
 
 export default function Signup({ setUsername, setpassword }) {
   function handleSubmitUsername(event) {
@@ -10,9 +11,11 @@ export default function Signup({ setUsername, setpassword }) {
 
   function handleSubmitPassword(event) {
     const password = event.target.value;
-    setpassword(password);
 
-    console.log("Password", password);
+    var ciphertext = crypto.AES.encrypt(password, "secret key 123").toString();
+    setpassword(ciphertext);
+
+    console.log("Password", ciphertext);
   }
 
   return (
@@ -26,6 +29,7 @@ export default function Signup({ setUsername, setpassword }) {
             placeholder="Username"
           />
         </label>
+        <section className="spacer"></section>
         <label className="form-label" onChange={handleSubmitPassword}>
           <input
             className="form-label-input"
